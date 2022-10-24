@@ -303,12 +303,29 @@ textarea {
     border-radius: 4px;
 }
 
+.form-textarea {
+    margin: 0;
+    padding: 11px 12px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    color: rgba(117, 117, 117, 0.5);
+    border-radius: 4px;
+}
+
 .form-policy {
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.71;
     color: var(--priamary-text-color);
+}
+
+.form-policy-link {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--accent-color);
 }
 
 .form-button {
@@ -410,9 +427,9 @@ textarea {
 }
 
 .works .item {
+    position: relative;
     margin-right: 30px;
     width: 370px;
-    position: relative;
     text-align: center;
 }
 
@@ -613,6 +630,7 @@ textarea {
 
 
 .footer-social-title {
+    margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -627,7 +645,6 @@ textarea {
 }
 
 .footer-social-link {
-    margin-top: 20px;
     width: 44px;
     height: 44px;
     display: flex;
@@ -648,7 +665,46 @@ textarea {
     background-color: #2196F3;
 }
 
+.footer-subscribe {
+    display: flex;
+}
 
+.footer-label {}
+
+.footer-input {
+    margin-right: 12px;
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+    color: var(--bacground-priamary);
+    background-color: var(--bacground-footer-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.footer-button {
+    display: flex;
+    gap: 10px;
+    border-radius: 4px;
+    padding: 10px 28px;
+    min-width: 200px;
+    border: 0;
+    color: var(--hero-footer-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.footer-button-icon {
+    fill: currentColor;
+}
 
 /* Button */
 
