@@ -16,6 +16,7 @@
     --bacground-priamary: #FFFFFF;
     --bacground-color-team-button-list: #F5F4FA;
     --bacground-footer-color: #2F303A;
+    --border-color: #2196F3;
 
 }
 
@@ -238,7 +239,7 @@ textarea {
 }
 
 .modal {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -281,71 +282,48 @@ textarea {
 
 .form-label {
     display: block;
-    margin-bottom: 4px;
+    margin-top: 10px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--priamary-text-color);
 }
 
-.form-control{
+.form-control {
     position: relative;
 }
 
-.form-input{
-    padding: 11px 12px 11px 30px;
+.form-input {
+    margin-top: 4px;
+    padding: 11px 12px 11px 42px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
-    border-color: var(--accent-color);
+    border-color: var(--border-color);
 }
 
-.form-icon{
+.form-icon {
     position: absolute;
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: currentColor;
 }
 
-.form-input:focus + .form-icon{
-    color: var(--accent-color);
+.form-input:focus+.form-icon {
+    color: var(--border-color);
 }
-
-/* .modal-item {
-    margin: 0;
-    padding: 0;
-}
-
-.form-list {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-align: left;
-} */
-
-/* .form-label {
-    margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: var(--priamary-text-color);
-}
-
-.form-input {
-    margin: 0;
-    padding: 11px 12px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-} */
 
 .form-textarea {
     width: 100%;
-    margin: 0;
+    height: 120px;
+    margin-top: 4px;
     padding: 11px 12px;
     font-size: 12px;
     line-height: 1.16;
@@ -353,6 +331,56 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     color: rgba(117, 117, 117, 0.5);
     border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+    border-color: var(--border-color);
+}
+
+.checkbox {
+    margin-top: 10px;
+}
+
+.form-input-checkbox {
+    appearance: none;
+    padding-left: 12px;
+}
+
+.form-lable-checkbox {
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 1.71px;
+    color: var(--priamary-text-color);
+}
+
+.form-lable-checkbox::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--title-text-color);
+    border-radius: 2px;
+}
+
+.form-lable-checkbox::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-check.svg);
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-checkbox:checked+.form-lable-checkbox::after {
+    opacity: 1;
 }
 
 .form-policy {
@@ -372,6 +400,7 @@ textarea {
 .form-button {
     border-radius: 4px;
     padding: 10px 52px;
+    margin: 30px 124px 0 124px;
     min-width: 200px;
     border: 0;
     color: var(--hero-footer-text-color);
@@ -381,8 +410,6 @@ textarea {
     font-family: inherit;
     font-size: 16px;
     line-height: 1.88;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
 }
 
@@ -704,6 +731,12 @@ textarea {
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: #2196F3;
+}
+
+/* Footer-subscribe */
+
+.subscribe {
+    padding-left: 93px;
 }
 
 .footer-subscribe {
