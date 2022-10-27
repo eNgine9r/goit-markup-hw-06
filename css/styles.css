@@ -252,7 +252,11 @@ textarea {
 }
 
 .button-modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    padding: 0;
     top: 8px;
     right: 8px;
     width: 30px;
@@ -266,17 +270,19 @@ textarea {
     fill: currentColor
 }
 
-.button-modal-close:focus, .button-modal-close:hover{
+.button-modal-close:focus,
+.button-modal-close:hover {
     color: var(--accent-color);
 }
 
 /* Backdrop Form */
 
 .modal-form {
-    /* width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px; */
+    margin-bottom: 10px;
+}
+
+.form-control {
+    position: relative;
 }
 
 .modal-title {
@@ -290,19 +296,14 @@ textarea {
 
 .form-label {
     display: block;
-    margin-top: 10px;
+    padding-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--priamary-text-color);
 }
 
-.form-control {
-    position: relative;
-}
-
 .form-input {
-    margin-top: 4px;
     padding: 11px 12px 11px 42px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -332,7 +333,6 @@ textarea {
 .form-textarea {
     width: 100%;
     height: 120px;
-    margin-top: 4px;
     padding: 11px 12px;
     font-size: 12px;
     line-height: 1.16;
@@ -654,11 +654,12 @@ textarea {
     background-color: var(--bacground-footer-color);
 }
 
-.footer-bloc-address{
+.footer-bloc-address {
     margin-right: 70px;
 }
 
 .footer-address {
+    width: 231px;
     margin-top: 20px;
     font-style: normal;
     list-style: none;
@@ -708,7 +709,7 @@ textarea {
     align-items: baseline;
 }
 
-.footer-bloc-social{
+.footer-bloc-social {
     margin-right: 93px;
 }
 
